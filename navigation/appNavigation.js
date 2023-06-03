@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
-import { LogBox, Text, View } from 'react-native';
+import { Dimensions, LogBox, Platform, Text, View } from 'react-native';
 import ProductScreen from '../screens/ProductScreen';
 import { themeColors } from '../theme';
 
@@ -13,8 +13,7 @@ import {HomeIcon as HomeSolid, HeartIcon as HeartSolid, ShoppingBagIcon as BagSo
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
-
+const ios = Platform.OS == 'ios';
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
@@ -38,16 +37,19 @@ function HomeTabs(){
     <Tab.Navigator screenOptions={({ route }) => ({
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarIcon: ({ focused, color, size }) => menuIcons(route, focused),
+        tabBarIcon: ({ focused }) => menuIcons(route, focused),
         tabBarStyle: {
           marginBottom: 20,
-          borderRadius: 50,
+          height: 75,
+          alignItems: 'center',
+          
+          borderRadius: 100,
           marginHorizontal: 20,
           backgroundColor: themeColors.bgLight,
 
         },
         tabBarItemStyle: {
-          marginTop: 30,
+          marginTop: ios? 30: 0,
           
         }
       })}
