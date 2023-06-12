@@ -1,16 +1,6 @@
 # Coffee-App-React-Native
 
-![Image](https://cdn.dribbble.com/userupload/6434824/file/original-77c8b0f4bae5bae7db97d8a0590e69b9.png?compress=1&resize=2400x1800)
 
-  
-  <p align="left">
-    <a href="https://www.youtube.com/channel/UCILovaLl2fUPAww1bGJ4sJQ?sub_confirmation=1"><img alt="Youtube" title="Youtube"  src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-    <p>
-      Watch Tutorial on YouTube <a href="https://youtu.be/mhyuMy4aI-M" target="_blank">Coffee App in React Native</a>
-    </p>
-    
-  </p>
-  
 
 ## Get Started
 
